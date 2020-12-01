@@ -27,5 +27,5 @@ func main() {
         log.Fatal(err)
 	}
 	
-	fmt.Println(day01.FindPair(lines, 2020))
+	fmt.Println(day01.FindTriple(lines, 2020))
 }
