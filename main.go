@@ -5,27 +5,25 @@ import (
     "bufio"
     "log"
 	"os"
-	"strconv"
-	"./day01"
+	"./day02"
 )
 
 func main() {
-	file, err := os.Open("day01/input.txt")
+	file, err := os.Open("day02/input.txt")
     if err != nil {
         log.Fatal(err)
     }
     defer file.Close()
 
-	var lines []int
+	var lines []string
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
-		num, _ := strconv.Atoi(scanner.Text())
-        lines = append(lines, num)
+        lines = append(lines, scanner.Text())
     }
 
     if err := scanner.Err(); err != nil {
         log.Fatal(err)
 	}
 	
-	fmt.Println(day01.FindTriple(lines, 2020))
+	fmt.Println(day02.NumberOfMatches(lines))
 }
