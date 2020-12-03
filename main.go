@@ -5,11 +5,11 @@ import (
     "bufio"
     "log"
 	"os"
-	"./day02"
+	"./day03"
 )
 
 func main() {
-	file, err := os.Open("day02/input.txt")
+	file, err := os.Open("day03/input.txt")
     if err != nil {
         log.Fatal(err)
     }
@@ -25,5 +25,5 @@ func main() {
         log.Fatal(err)
 	}
 	
-	fmt.Println(day02.NumberOfSecondaryMatches(lines))
+	fmt.Println(day03.CountTrees(lines))
 }
