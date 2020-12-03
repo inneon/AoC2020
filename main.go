@@ -25,5 +25,5 @@ func main() {
         log.Fatal(err)
 	}
 	
-	fmt.Println(day02.NumberOfMatches(lines))
+	fmt.Println(day02.NumberOfSecondaryMatches(lines))
 }

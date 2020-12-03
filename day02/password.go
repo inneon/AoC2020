@@ -39,6 +39,12 @@ func checkRule (password passwordLine) bool {
 	return password.lowerBound <= occurences && occurences <= password.upperBound
 }
 
+func checkSecondRule (password passwordLine) bool {
+	firstMatch := password.password[password.lowerBound-1:password.lowerBound] == password.character
+	secondMatch := password.password[password.upperBound-1:password.upperBound] == password.character
+	return firstMatch != secondMatch
+}
+
 // NumberOfMatches returns the number of lines from the password database that match their rule
 func NumberOfMatches (lines []string) int {
 	result := 0
@@ -48,6 +54,21 @@ func NumberOfMatches (lines []string) int {
 			continue
 		}
 		if checkRule(*pass) {
+			result ++
+		}
+	}
+	return result
+}
+
+// NumberOfSecondaryMatches returns the number of lines from the password database that match their rule
+func NumberOfSecondaryMatches (lines []string) int {
+	result := 0
+	for _, line := range lines {
+		pass, err := parse(line)
+		if err != nil {
+			continue
+		}
+		if checkSecondRule(*pass) {
 			result ++
 		}
 	}

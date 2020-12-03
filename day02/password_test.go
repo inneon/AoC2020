@@ -49,4 +49,38 @@ func TestPassword(t *testing.T) {
 			t.Errorf("got %v want %v", got, want)
 		}
 	})
+
+	t.Run("When a password matches the second rule", func(t *testing.T){
+		got := checkSecondRule(passwordLine{
+			lowerBound: 1,
+			upperBound: 3,
+			character: "a",
+			password: "abcda",
+		})
+		want := true
+		if got != want {
+			t.Errorf("got %v want %v", got, want)
+		}
+	})
+
+	t.Run("When a password doesn't match its second rule", func(t *testing.T){
+		got := checkSecondRule(passwordLine{
+			lowerBound: 2,
+			upperBound: 9,
+			character: "c",
+			password: "ccccccccc",
+		})
+		want := false
+		if got != want {
+			t.Errorf("got %v want %v", got, want)
+		}
+	})
+
+	t.Run("Example 1a", func(t *testing.T) {
+		got := NumberOfSecondaryMatches([]string{"1-3 a: abcde", "1-3 b: cdefg", "2-9 c: ccccccccc"})
+		want := 1
+		if got != want {
+			t.Errorf("got %v want %v", got, want)
+		}
+	})
 }
