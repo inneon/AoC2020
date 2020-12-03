@@ -25,5 +25,5 @@ func main() {
         log.Fatal(err)
 	}
 	
-	fmt.Println(day03.CountTrees(lines))
+	fmt.Println(day03.CheckRoutes(lines))
 }
