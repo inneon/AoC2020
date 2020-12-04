@@ -25,5 +25,5 @@ func main() {
         log.Fatal(err)
 	}
 	
-	fmt.Println(day04.ValidPassports(lines))
+	fmt.Println(day04.ValidPassportsStrict(lines))
 }
