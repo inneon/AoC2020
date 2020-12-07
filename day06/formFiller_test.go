@@ -26,4 +26,28 @@ func TestFormFiller(t *testing.T) {
 			t.Errorf("got %d want %d", got, want)
 		}
 	})
+
+	t.Run("example2", func (t *testing.T) {
+		got := FillFormCorrectly([]string {
+			"abc",
+			"",
+			"a",
+			"b",
+			"c",
+			"",
+			"ab",
+			"ac",
+			"",
+			"a",
+			"a",
+			"a",
+			"a",
+			"",
+			"b",
+		})
+		want := 6
+		if got != want {
+			t.Errorf("got %d want %d", got, want)
+		}
+	})
 }

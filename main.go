@@ -25,5 +25,5 @@ func main() {
         log.Fatal(err)
 	}
 	
-	fmt.Println(day06.FillForm(lines))
+	fmt.Println(day06.FillFormCorrectly(lines))
 }
