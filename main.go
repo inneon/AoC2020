@@ -25,5 +25,5 @@ func main() {
         log.Fatal(err)
 	}
 	
-	fmt.Println(day07.CountOutermost(lines))
+	fmt.Println(day07.CountInside(lines))
 }
