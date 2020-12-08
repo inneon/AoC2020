@@ -5,11 +5,11 @@ import (
     "bufio"
     "log"
 	"os"
-	"./day07"
+	"./day08"
 )
 
 func main() {
-	file, err := os.Open("day07/input.txt")
+	file, err := os.Open("day08/input.txt")
     if err != nil {
         log.Fatal(err)
     }
@@ -25,5 +25,5 @@ func main() {
         log.Fatal(err)
 	}
 	
-	fmt.Println(day07.CountInside(lines))
+	fmt.Println(day08.Fix(lines))
 }
