@@ -5,11 +5,12 @@ import (
     "bufio"
     "log"
 	"os"
-	"./day08"
+	"strconv"
+	"./day09"
 )
 
-func main() {
-	file, err := os.Open("day08/input.txt")
+func getLines(fileName string) []string {
+	file, err := os.Open(fileName)
     if err != nil {
         log.Fatal(err)
     }
@@ -24,6 +25,19 @@ func main() {
     if err := scanner.Err(); err != nil {
         log.Fatal(err)
 	}
-	
-	fmt.Println(day08.Fix(lines))
+	return lines
+}
+
+func getNumbericLines(fileName string) []int {
+	var numbers []int
+	lines := getLines(fileName)
+	for _, line := range lines {
+		parsed, _ := strconv.Atoi(line)
+        numbers = append(numbers, parsed)
+	}
+	return numbers
+}
+
+func main() {
+	fmt.Println(day09.EncryptionWeakness(getNumbericLines("day09/input.txt"), 25))
 }
