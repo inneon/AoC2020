@@ -6,7 +6,7 @@ import (
     "log"
 	"os"
 	"strconv"
-	"./day09"
+	"./day10"
 )
 
 func getLines(fileName string) []string {
@@ -39,5 +39,5 @@ func getNumbericLines(fileName string) []int {
 }
 
 func main() {
-	fmt.Println(day09.EncryptionWeakness(getNumbericLines("day09/input.txt"), 25))
+	fmt.Println(day10.BuildAdaptorChain(getNumbericLines("day10/input.txt")))
 }
