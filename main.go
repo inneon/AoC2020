@@ -39,5 +39,5 @@ func getNumbericLines(fileName string) []int {
 }
 
 func main() {
-	fmt.Println(day11.OccupiedSeats(getLines("day11/input.txt")))
+	fmt.Println(day11.OccupiedSeatsByVisibility(getLines("day11/input.txt")))
 }

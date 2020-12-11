@@ -41,4 +41,23 @@ func TestSeatArranger(t *testing.T) {
 		}
 	})
 
+	t.Run("example 1b", func(t *testing.T) {
+		got := OccupiedSeatsByVisibility([]string {
+			"L.LL.LL.LL",
+			"LLLLLLL.LL",
+			"L.L.L..L..",
+			"LLLL.LL.LL",
+			"L.LL.LL.LL",
+			"L.LLLLL.LL",
+			"..L.L.....",
+			"LLLLLLLLLL",
+			"L.LLLLLL.L",
+			"L.LLLLL.LL",
+		})
+		want := 26
+		if got != want {
+			t.Errorf("got %d want %d", got, want)
+		}
+	})
+
 }
