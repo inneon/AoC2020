@@ -39,5 +39,5 @@ func getNumbericLines(fileName string) []int {
 }
 
 func main() {
-	fmt.Println(day10.BuildAdaptorChain(getNumbericLines("day10/input.txt")))
+	fmt.Println(day10.ChainPermutations(getNumbericLines("day10/input.txt")))
 }
