@@ -6,7 +6,7 @@ import (
     "log"
 	"os"
 	"strconv"
-	"./day11"
+	"./day12"
 )
 
 func getLines(fileName string) []string {
@@ -39,5 +39,5 @@ func getNumbericLines(fileName string) []int {
 }
 
 func main() {
-	fmt.Println(day11.OccupiedSeatsByVisibility(getLines("day11/input.txt")))
+	fmt.Println(day12.FollowDirections(getLines("day12/input.txt")))
 }
