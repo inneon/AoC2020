@@ -39,5 +39,5 @@ func getNumbericLines(fileName string) []int {
 }
 
 func main() {
-	fmt.Println(day12.FollowDirections(getLines("day12/input.txt")))
+	fmt.Println(day12.FollowWaypoint(getLines("day12/input.txt")))
 }
