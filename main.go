@@ -40,6 +40,5 @@ func getNumbericLines(fileName string) []int {
 
 func main() {
 	lines := getLines("day13/input.txt")
-	arg1, _ := strconv.Atoi(lines[0])
-	fmt.Println(day13.EarliestBus(arg1, lines[1]))
+	fmt.Println(day13.AlignedTimestamps(lines[1]))
 }
