@@ -6,7 +6,7 @@ import (
     "log"
 	"os"
 	"strconv"
-	"./day12"
+	"./day13"
 )
 
 func getLines(fileName string) []string {
@@ -39,5 +39,7 @@ func getNumbericLines(fileName string) []int {
 }
 
 func main() {
-	fmt.Println(day12.FollowWaypoint(getLines("day12/input.txt")))
+	lines := getLines("day13/input.txt")
+	arg1, _ := strconv.Atoi(lines[0])
+	fmt.Println(day13.EarliestBus(arg1, lines[1]))
 }
