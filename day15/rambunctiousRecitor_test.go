@@ -36,4 +36,20 @@ func TestRambunctiousRecitor(t *testing.T) {
 			t.Errorf("got %d want %d", got, want)
 		}
 	})
+
+	t.Run("example 2a", func(t *testing.T) {
+		got := MemoryGame([]int{0,3,6}, 30000000)
+		want := 175594
+		if got != want {
+			t.Errorf("got %d want %d", got, want)
+		}
+	})
+
+	t.Run("example 2b", func(t *testing.T) {
+		got := MemoryGame([]int{1,3,2}, 30000000)
+		want := 2578
+		if got != want {
+			t.Errorf("got %d want %d", got, want)
+		}
+	})
 }

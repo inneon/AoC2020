@@ -40,5 +40,5 @@ func getNumbericLines(fileName string) []int {
 
 func main() {
 	// lines := getLines("day15/input.txt")
-	fmt.Println(day15.MemoryGame([]int{8,11,0,19,1,2}, 2020))
+	fmt.Println(day15.MemoryGame([]int{8,11,0,19,1,2}, 30000000))
 }
