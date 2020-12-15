@@ -40,5 +40,5 @@ func getNumbericLines(fileName string) []int {
 
 func main() {
 	lines := getLines("day14/input.txt")
-	fmt.Println(day14.RunMaskedProgram(lines))
+	fmt.Println(day14.RunV2Program(lines))
 }
