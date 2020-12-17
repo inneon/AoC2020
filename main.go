@@ -6,7 +6,7 @@ import (
     "log"
 	"os"
 	"strconv"
-	"./day15"
+	"./day17"
 )
 
 func getLines(fileName string) []string {
@@ -39,6 +39,6 @@ func getNumbericLines(fileName string) []int {
 }
 
 func main() {
-	// lines := getLines("day15/input.txt")
-	fmt.Println(day15.MemoryGame([]int{8,11,0,19,1,2}, 30000000))
+	lines := getLines("day17/input.txt")
+	fmt.Println(day17.RunCube(lines, 6))
 }
