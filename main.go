@@ -40,5 +40,5 @@ func getNumbericLines(fileName string) []int {
 
 func main() {
 	lines := getLines("day17/input.txt")
-	fmt.Println(day17.RunCube(lines, 6))
+	fmt.Println(day17.RunHyperCube(lines, 6))
 }
