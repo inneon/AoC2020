@@ -6,7 +6,7 @@ import (
     "log"
 	"os"
 	"strconv"
-	"./day17"
+	"./day18"
 )
 
 func getLines(fileName string) []string {
@@ -39,6 +39,6 @@ func getNumbericLines(fileName string) []int {
 }
 
 func main() {
-	lines := getLines("day17/input.txt")
-	fmt.Println(day17.RunHyperCube(lines, 6))
+	lines := getLines("day18/input.txt")
+	fmt.Println(day18.DoHomework(lines))
 }
